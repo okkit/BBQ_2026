@@ -4,17 +4,17 @@ public class Modul {
 
 	private int id;
 	private String bezeichnung;
-	private int spezialisierung_id;
+	private Spezialisierung spezialisierung;
 
 	public Modul() {
 		super();
 	}
 
-	public Modul(int id, String bezeichnung, int spezialisierung_id) {
+	public Modul(int id, String bezeichnung, Spezialisierung spezialisierung) {
 		super();
 		this.id = id;
 		this.bezeichnung = bezeichnung;
-		this.spezialisierung_id = spezialisierung_id;
+		this.spezialisierung = spezialisierung;
 	}
 
 	public int getId() {
@@ -33,17 +33,17 @@ public class Modul {
 		this.bezeichnung = bezeichnung;
 	}
 
-	public int getSpezialisierung_id() {
-		return spezialisierung_id;
+	public Spezialisierung getSpezialisierung() {
+		return spezialisierung;
 	}
 
-	public void setSpezialisierung_id(int spezialisierung_id) {
-		this.spezialisierung_id = spezialisierung_id;
+	public void setSpezialisierung(Spezialisierung spezialisierung) {
+		this.spezialisierung = spezialisierung;
 	}
 
 	@Override
 	public String toString() {
-		return bezeichnung + " id " + id + " spezialisierung " + spezialisierung_id;
+		return bezeichnung + " id " + id + " spezialisierung " + spezialisierung.getBezeichnung();
 	}
 
 }
