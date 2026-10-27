@@ -9,6 +9,8 @@ import java.util.ArrayList;
  * Entspricht der DB-Entität Fach
  */
 public class Fach extends Object {
+	
+	public static final String EOF = "\n";
 
 	private int id;
 	private String bezeichnung;
@@ -76,7 +78,8 @@ public class Fach extends Object {
 
 	@Override
 	public String toString() {
-		String str = "Fach " + bezeichnung + " id " + id;
+		String str = "Fach " + bezeichnung + " id " + id + EOF;
+		str += spezialisierungen.toString();
 		return str;
 	}
 }

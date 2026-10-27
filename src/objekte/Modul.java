@@ -43,7 +43,7 @@ public class Modul {
 
 	@Override
 	public String toString() {
-		return bezeichnung + " id " + id + " spezialisierung " + spezialisierung.getBezeichnung();
+		return Fach.EOF + bezeichnung + " id " + id + Fach.EOF;
 	}
 
 }

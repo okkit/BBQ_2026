@@ -28,11 +28,16 @@ public class Aufgabe4 {
 		sp.addModul(createModul(1, "Modul 1.1", sp));
 		sp.addModul(createModul(2, "Modul 1.2", sp));
 		sp.addModul(createModul(3, "Modul 1.3", sp));
+		
+		f.addSpezialisierung(sp = createSpezialisierung(2, "Zweite Spezialisierung", f));
+		sp.addModul(createModul(1, "Modul 2.1", sp));
+		sp.addModul(createModul(2, "Modul 2.2", sp));
+		sp.addModul(createModul(3, "Modul 2.3", sp));
+		
+		IO.println(f);
 
 		Gruppe gr = new Gruppe(10, "Gruppe 1");
 		createAzibiFor(gr, 5, sp);
-		
-//		f.addSpezialisierung(sp = createSpezialisierung(2, "Zweite Spezialisierung", f));
 
 	}
 	

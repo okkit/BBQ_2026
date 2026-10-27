@@ -67,7 +67,9 @@ public class Spezialisierung {
 
 	@Override
 	public String toString() {
-		return bezeichnung + " id " + id + " fach " + fach.getBezeichnung();
+		String str = Fach.EOF + bezeichnung + " id " + id + Fach.EOF;
+		str += module.toString();
+		return str;
 	}
 
 }
