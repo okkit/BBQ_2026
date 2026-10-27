@@ -56,6 +56,7 @@ public class Fach extends Object {
 			return "Das Objekt ist bereits in der Liste";
 		}
 
+		sp.setFach(this);
 		spezialisierungen.add(sp);
 		return null;
 	}

@@ -32,12 +32,12 @@ public class TestObjekte {
 		IO.println(spezi1);
 
 // Fach 1 Spezial. 2	
-		Spezialisierung spezi2 = new Spezialisierung(2, "SI", fach1);
+		Spezialisierung spezi2 = new Spezialisierung(2, "SI");
 		IO.println(spezi2);
 		
 		Gruppe gruppe = new Gruppe(12, "U30");
 		
-		Azubi az = new Azubi(1, "Schmidt", "Max", spezi2, null);
+		Azubi az = new Azubi(1, "Schmidt", "Max");
 		
 		IO.print(az);
 		IO.println(gruppe);

@@ -12,14 +12,12 @@ public class Azubi {
 		super();
 	}
 
-	public Azubi(int id, String name, String vorname, Spezialisierung spezialisierung, Gruppe gruppe) {
+	public Azubi(int id, String name, String vorname) {
 
 		super();
 		this.id = id;
 		this.name = name;
 		this.vorname = vorname;
-		this.spezialisierung = spezialisierung;
-		this.gruppe = gruppe;
 	}
 
 	public int getId() {
@@ -64,10 +62,7 @@ public class Azubi {
 
 	@Override
 	public String toString() {
-		String str = name + vorname + "\n";
-		str += "Gruppe " + gruppe.getId() + "\n";
-		str += "Spezialisierung" + spezialisierung.getBezeichnung();
-		return str;
+		return name + " " + vorname + " id " + id + "\n";
 	}
 
 }

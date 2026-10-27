@@ -9,6 +9,7 @@ public class Spezialisierung {
 	private Fach fach; // Eine Spezialisierung gehört zu einem Fach
 	
 	private ArrayList<Modul> module;
+	private ArrayList<Azubi> azubis;
 
 	public Spezialisierung() {
 
@@ -19,15 +20,18 @@ public class Spezialisierung {
 	 * 
 	 * @param id
 	 * @param bezeichnung
-	 * @param fach_id
 	 */
-	public Spezialisierung(int id, String bezeichnung, Fach fach) {
+	public Spezialisierung(int id, String bezeichnung) {
 		super();
 		this.id = id;
 		this.bezeichnung = bezeichnung;
-		this.fach = fach;
 	}
 	
+	/**
+	 * Fügt ein Modul in die Modulliste hinzu
+	 * @param m Modul
+	 * @return Message, wenn das Modul bereits hinzugefügt ist, somst null
+	 */
 	public String addModul(Modul m) {
 
 		if (module == null)
@@ -37,9 +41,30 @@ public class Spezialisierung {
 			return "Das Objekt ist bereits in der Liste";
 		}
 
+		m.setSpezialisierung(this);
 		module.add(m);
 		return null;
 	}
+	
+	/**
+	 * Fügt einen Azubi in die Liste der Azubis hinzu
+	 * @param azubi Azubi
+	 * @return Message, wenn das Modul bereits hinzugefügt ist, somst null
+	 */
+	public String addZubi(Azubi a) {
+
+		if (azubis == null)
+			azubis = new ArrayList<Azubi>();
+
+		if (azubis.contains(a)) {
+			return "Das Objekt ist bereits in der Liste";
+		}
+
+		a.setSpezialisierung(this);
+		azubis.add(a);
+		return null;
+	}
+	
 
 	public int getId() {
 		return id;

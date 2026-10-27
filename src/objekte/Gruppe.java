@@ -43,6 +43,7 @@ public class Gruppe {
 			return "Das Objekt ist bereits in der Liste";
 		}
 
+		tn.setGruppe(this);
 		teilnehmer.add(tn);
 		return null;
 	}

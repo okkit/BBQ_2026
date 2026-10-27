@@ -10,11 +10,10 @@ public class Modul {
 		super();
 	}
 
-	public Modul(int id, String bezeichnung, Spezialisierung spezialisierung) {
+	public Modul(int id, String bezeichnung) {
 		super();
 		this.id = id;
 		this.bezeichnung = bezeichnung;
-		this.spezialisierung = spezialisierung;
 	}
 
 	public int getId() {
