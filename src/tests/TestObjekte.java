@@ -1,6 +1,8 @@
 package tests;
 
+import objekte.Azubi;
 import objekte.Fach;
+import objekte.Gruppe;
 import objekte.Spezialisierung;
 
 public class TestObjekte {
@@ -32,6 +34,13 @@ public class TestObjekte {
 // Fach 1 Spezial. 2	
 		Spezialisierung spezi2 = new Spezialisierung(2, "SI", fach1);
 		IO.println(spezi2);
+		
+		Gruppe gruppe = new Gruppe(12, "U30");
+		
+		Azubi az = new Azubi(1, "Schmidt", "Max", spezi2, null);
+		
+		IO.print(az);
+		IO.println(gruppe);
 
 	}
 

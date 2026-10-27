@@ -6,7 +6,7 @@ public class Gruppe {
 
 	private int id;
 	private String name;
-	
+
 	private ArrayList<Azubi> teilnehmer;
 
 	/**
@@ -26,11 +26,13 @@ public class Gruppe {
 		this.id = id;
 		this.name = name;
 	}
-	
+
 	/**
 	 * 
-	 * @param tn
-	 * @return
+	 * @param tn instanz der Klasse Azubi, d.h. ein Azubi,<br>
+	 *           der in die Gruppe aufgenommen werden soll
+	 * @return eine Meldung, wenn tn bereits zu der Gruppe gehört<br>
+	 *         sonst null
 	 */
 	public String addTeilnehmer(Azubi tn) {
 
