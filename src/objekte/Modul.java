@@ -45,4 +45,9 @@ public class Modul extends BBQObjekt{
 		return null;
 	}
 
+	@Override
+	protected String getData() {
+		return id + SEPARATOR + bezeichnung;
+	}
+
 }

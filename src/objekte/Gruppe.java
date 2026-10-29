@@ -59,4 +59,9 @@ public class Gruppe extends BBQObjekt{
 		return null;
 	}
 
+	@Override
+	protected String getData() {
+		return id + SEPARATOR + bezeichnung;
+	}
+
 }

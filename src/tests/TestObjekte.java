@@ -9,7 +9,7 @@ public class TestObjekte {
 
 	public static void main(String[] args) {
 
-//Fach 1
+//Fach 1 
 		Fach fach1;
 		fach1 = new Fach(1, "IT");
 		IO.println(fach1);

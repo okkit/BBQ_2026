@@ -14,8 +14,9 @@ public class Azubi extends BBQObjekt {
 		this.vorname = vorname;
 	}
 	
+	@Override
 	protected String getData() {
-		return name + " " + vorname;
+		return name + SEPARATOR + vorname + SEPARATOR + id;
 	}
 
 	public String getName() {
@@ -52,12 +53,12 @@ public class Azubi extends BBQObjekt {
 
 	@Override
 	public String toString() {
-		return name + " " + vorname + " id " + id + "\n";
+		return name + ";" + vorname + ";" + id + "\n";
 	}
 
 	@Override
 	protected String getFileName() {
-		return "Azubi.info";
+		return "Azubi";
 	}
 
 }

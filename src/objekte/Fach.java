@@ -25,7 +25,7 @@ public class Fach extends BBQObjekt {
 	 * @param bezeichnung Bezeichnung des Faches
 	 */
 	public Fach(int id, String bezeichnung) {
-		super(id);
+		super(id); 
 		this.bezeichnung = bezeichnung;
 	}
 
@@ -80,5 +80,10 @@ public class Fach extends BBQObjekt {
 	protected String getFileName() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	protected String getData() {
+		return id + SEPARATOR + bezeichnung;
 	}
 }

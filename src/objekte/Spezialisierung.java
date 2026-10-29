@@ -90,4 +90,10 @@ public class Spezialisierung extends BBQObjekt {
 		return null;
 	}
 
+	@Override
+	protected String getData() {
+		
+		return id + SEPARATOR + bezeichnung;
+	}
+
 }
