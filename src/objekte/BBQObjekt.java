@@ -8,9 +8,9 @@ import util.FileIO;
  */
 public abstract class BBQObjekt extends Object {
 
-	protected static final String SEPARATOR = ";";
-	protected static final String FOLDER = "./data/";
-	protected static final String FILE_EXTENTION = ".csv";
+	public static final String SEPARATOR = ";";
+	private static final String FOLDER = "./data/";
+	private static final String FILE_EXTENTION = ".csv";
 
 	/**
 	 * Entspricht dem PK
@@ -33,9 +33,21 @@ public abstract class BBQObjekt extends Object {
 	 * Speichert Daten der Instanzen in eine Datei
 	 */
 	public void save() {
+		
 		String fn = FOLDER + getFileName() + FILE_EXTENTION;
+		id = createIdFor(fn);
 		String msg = FileIO.writeIntoFile(fn, getData());
 		IO.print(msg);
+	}
+	
+	/**
+	 * Liefert eine id für das zu speichernde Objekt
+	 * @param objektName
+	 * @return
+	 */
+	private int createIdFor(String objektName) {
+		
+		return FileIO.getLineCount(objektName) + 1;
 	}
 
 	public int getId() {

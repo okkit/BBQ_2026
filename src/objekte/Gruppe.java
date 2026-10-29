@@ -60,9 +60,9 @@ public class Gruppe extends BBQObjekt {
 
 	@Override
 	protected String getData() {
-		String data = id + SEPARATOR + bezeichnung + "\n";
+		String data = id + SEPARATOR + bezeichnung;
 		for (Azubi azubi : teilnehmer) {
-			data += azubi.getName() + SEPARATOR + azubi.getVorname() + SEPARATOR + azubi.id + "\n";
+			data += "\n" + azubi.getName() + SEPARATOR + azubi.getVorname() + SEPARATOR + azubi.id;
 		}
 		return data;
 	}

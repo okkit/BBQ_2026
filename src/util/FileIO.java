@@ -1,7 +1,10 @@
 package util;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * Die Klasse stellt einfache Mitteln (Methoden)<br>
@@ -23,12 +26,31 @@ public class FileIO {
 
 		try (FileWriter fileWriter = new FileWriter(fileName, true)) {
 
-			fileWriter.write(data + NL);
+			fileWriter.write(NL + data);
 			return SUCCESS_MSG;
 
 		} catch (IOException e) {
 			return e.getLocalizedMessage();
 		}
 
+	}
+
+	/**
+	 * Zählt die Anzahl der Zeilen in einem File
+	 * 
+	 * @param fileName
+	 * @return Anzahl der Zeilen, 0 auch, wenn Fehler beim lesen aus dem File
+	 */
+	public static int getLineCount(String fileName) {
+
+		int count = 0;
+		try (Scanner scanner = new Scanner(new File(fileName))) {
+			while (scanner.hasNextLine()) {
+				scanner.next();
+				count++;
+			}
+		} catch (FileNotFoundException e) {
+		}
+		return count;
 	}
 }
