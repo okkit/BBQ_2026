@@ -84,4 +84,10 @@ public class Spezialisierung extends BBQObjekt {
 		return str;
 	}
 
+	@Override
+	protected String getFileName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

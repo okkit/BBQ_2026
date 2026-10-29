@@ -75,4 +75,10 @@ public class Fach extends BBQObjekt {
 		str += spezialisierungen.toString();
 		return str;
 	}
+
+	@Override
+	protected String getFileName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

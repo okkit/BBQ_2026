@@ -53,4 +53,10 @@ public class Gruppe extends BBQObjekt{
 		return bezeichnung + " id " + id;
 	}
 
+	@Override
+	protected String getFileName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

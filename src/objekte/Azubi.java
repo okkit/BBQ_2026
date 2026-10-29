@@ -13,6 +13,10 @@ public class Azubi extends BBQObjekt {
 		this.name = name;
 		this.vorname = vorname;
 	}
+	
+	protected String getData() {
+		return name + " " + vorname;
+	}
 
 	public String getName() {
 		return name;
@@ -33,7 +37,7 @@ public class Azubi extends BBQObjekt {
 	public Spezialisierung getSpezialisierung() {
 		return spezialisierung;
 	}
-
+ 
 	public void setSpezialisierung(Spezialisierung spezialisierung) {
 		this.spezialisierung = spezialisierung;
 	}
@@ -49,6 +53,11 @@ public class Azubi extends BBQObjekt {
 	@Override
 	public String toString() {
 		return name + " " + vorname + " id " + id + "\n";
+	}
+
+	@Override
+	protected String getFileName() {
+		return "Azubi.info";
 	}
 
 }

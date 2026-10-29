@@ -39,4 +39,10 @@ public class Modul extends BBQObjekt{
 		return Fach.EOF + bezeichnung + " id " + id + Fach.EOF;
 	}
 
+	@Override
+	protected String getFileName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
