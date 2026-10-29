@@ -2,7 +2,7 @@ package objekte;
 
 import java.util.ArrayList;
 
-public class Gruppe extends BBQObjekt{
+public class Gruppe extends BBQObjekt {
 
 	private String bezeichnung;
 
@@ -55,13 +55,16 @@ public class Gruppe extends BBQObjekt{
 
 	@Override
 	protected String getFileName() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Gruppen";
 	}
 
 	@Override
 	protected String getData() {
-		return id + SEPARATOR + bezeichnung;
+		String data = id + SEPARATOR + bezeichnung + "\n";
+		for (Azubi azubi : teilnehmer) {
+			data += azubi.getName() + SEPARATOR + azubi.getVorname() + SEPARATOR + azubi.id + "\n";
+		}
+		return data;
 	}
 
 }

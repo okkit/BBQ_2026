@@ -7,26 +7,28 @@ import util.FileIO;
  * entspricht einer DB-Entität (Tabelle in einer relationalen Datenbank).
  */
 public abstract class BBQObjekt extends Object {
-	
+
 	protected static final String SEPARATOR = ";";
 	protected static final String FOLDER = "./data/";
 	protected static final String FILE_EXTENTION = ".csv";
-	
+
 	/**
 	 * Entspricht dem PK
 	 */
 	protected int id;
-	
+
 	/**
-	 * Jeder der Tochterklassen MUSS diese Methode implementieren 
+	 * Jeder der Tochterklassen MUSS diese Methode implementieren
 	 * 
 	 */
 	protected abstract String getFileName();
+
 	protected abstract String getData();
 
 	public BBQObjekt(int id) {
 		this.id = id;
 	}
+
 	/**
 	 * Speichert Daten der Instanzen in eine Datei
 	 */
@@ -35,9 +37,6 @@ public abstract class BBQObjekt extends Object {
 		String msg = FileIO.writeIntoFile(fn, getData());
 		IO.print(msg);
 	}
-	
-
-	
 
 	public int getId() {
 		return id;
