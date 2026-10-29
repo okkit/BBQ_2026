@@ -1,31 +1,17 @@
 package objekte;
 
-public class Azubi {
+public class Azubi extends BBQObjekt {
 
-	private int id;
 	private String name;
-	String vorname;
+	private String vorname;
 	private Spezialisierung spezialisierung;
 	private Gruppe gruppe;
 
-	public Azubi() {
-		super();
-	}
-
 	public Azubi(int id, String name, String vorname) {
 
-		super();
-		this.id = id;
+		super(id);
 		this.name = name;
 		this.vorname = vorname;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getName() {

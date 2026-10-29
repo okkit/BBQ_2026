@@ -2,19 +2,11 @@ package objekte;
 
 import java.util.ArrayList;
 
-public class Gruppe {
+public class Gruppe extends BBQObjekt{
 
-	private int id;
-	private String name;
+	private String bezeichnung;
 
 	private ArrayList<Azubi> teilnehmer;
-
-	/**
-	 * 
-	 */
-	public Gruppe() {
-
-	}
 
 	/**
 	 * 
@@ -23,8 +15,8 @@ public class Gruppe {
 	 */
 	public Gruppe(int id, String name) {
 
-		this.id = id;
-		this.name = name;
+		super(id);
+		this.bezeichnung = name;
 	}
 
 	/**
@@ -48,25 +40,17 @@ public class Gruppe {
 		return null;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public String getName() {
-		return name;
+		return bezeichnung;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.bezeichnung = name;
 	}
 
 	@Override
 	public String toString() {
-		return name + " id " + id;
+		return bezeichnung + " id " + id;
 	}
 
 }

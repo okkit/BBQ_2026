@@ -8,23 +8,15 @@ import java.util.ArrayList;
 /**
  * Entspricht der DB-Entität Fach
  */
-public class Fach extends Object {
-	
-	public static final String EOF = "\n";
+public class Fach extends BBQObjekt {
 
-	private int id;
+	public static final String EOF = "\n";
+	
 	private String bezeichnung;
 	// zu einem Fach gehören mehrere Spezialisierungen
 	// A lot of Spezialisierung belong to Fach
 	// mehrere = []; A lot of = []
 	private ArrayList<Spezialisierung> spezialisierungen;
-
-	/**
-	 * Standartkonstruktor
-	 */
-	public Fach() {
-
-	}
 
 	/**
 	 * Konstruiert eine Instanz der Klasse und initielisiert alle Felder
@@ -33,7 +25,7 @@ public class Fach extends Object {
 	 * @param bezeichnung Bezeichnung des Faches
 	 */
 	public Fach(int id, String bezeichnung) {
-		this.id = id;
+		super(id);
 		this.bezeichnung = bezeichnung;
 	}
 

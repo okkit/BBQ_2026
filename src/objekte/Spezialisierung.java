@@ -2,18 +2,13 @@ package objekte;
 
 import java.util.ArrayList;
 
-public class Spezialisierung {
+public class Spezialisierung extends BBQObjekt {
 
-	private int id;
 	private String bezeichnung;
 	private Fach fach; // Eine Spezialisierung gehört zu einem Fach
-	
+
 	private ArrayList<Modul> module;
 	private ArrayList<Azubi> azubis;
-
-	public Spezialisierung() {
-
-	}
 
 	/**
 	 * Konstruiert eine Instanz der Klasse. nitialisiert die Felder der Klasse
@@ -22,13 +17,13 @@ public class Spezialisierung {
 	 * @param bezeichnung
 	 */
 	public Spezialisierung(int id, String bezeichnung) {
-		super();
-		this.id = id;
+		super(id);
 		this.bezeichnung = bezeichnung;
 	}
-	
+
 	/**
 	 * Fügt ein Modul in die Modulliste hinzu
+	 * 
 	 * @param m Modul
 	 * @return Message, wenn das Modul bereits hinzugefügt ist, somst null
 	 */
@@ -45,9 +40,10 @@ public class Spezialisierung {
 		module.add(m);
 		return null;
 	}
-	
+
 	/**
 	 * Fügt einen Azubi in die Liste der Azubis hinzu
+	 * 
 	 * @param azubi Azubi
 	 * @return Message, wenn das Modul bereits hinzugefügt ist, somst null
 	 */
@@ -63,15 +59,6 @@ public class Spezialisierung {
 		a.setSpezialisierung(this);
 		azubis.add(a);
 		return null;
-	}
-	
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getBezeichnung() {
